@@ -5,6 +5,7 @@ function MetricCard({ icon, target, label, disciplines = null }) {
   const [showOverlay, setShowOverlay] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
   const cardRef = useRef(null);
+  const [touchOpen, setTouchOpen] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -27,7 +28,6 @@ function MetricCard({ icon, target, label, disciplines = null }) {
   }, [hasAnimated]);
 
   const animateCount = () => {
-    const hasPlus = target >= 100;
     const duration = 2000;
     const steps = 60;
     const increment = target / steps;
@@ -44,25 +44,34 @@ function MetricCard({ icon, target, label, disciplines = null }) {
     }, duration / steps);
   };
 
+  const handleTouchStart = (e) => {
+    if (disciplines) {
+      e.preventDefault();
+      setTouchOpen(!touchOpen);
+      setShowOverlay(!touchOpen);
+    }
+  };
+
   return (
     <div
       ref={cardRef}
       className={`metric-card ${disciplines ? 'has-overlay' : ''}`}
       onMouseEnter={() => disciplines && setShowOverlay(true)}
       onMouseLeave={() => disciplines && setShowOverlay(false)}
-      onTouchStart={(e) => {
-        if (disciplines) {
-          e.preventDefault();
-          setShowOverlay(!showOverlay);
-        }
-      }}
+      onTouchStart={handleTouchStart}
+      tabIndex={disciplines ? 0 : -1}
     >
       <div className="metric-icon">{icon}</div>
       <span className="metric-number">{count}{target >= 100 ? '+' : ''}</span>
       <span className="metric-label">{label}</span>
 
       {disciplines && (
-        <div className={`discipline-overlay ${showOverlay ? 'show' : ''}`}>
+        <div 
+          className={`discipline-overlay ${showOverlay ? 'show' : ''}`}
+          role="dialog"
+          aria-live="polite"
+          aria-hidden={!showOverlay}
+        >
           <div className="overlay-header"></div>
           <ul className="discipline-list">
             {disciplines.map((discipline, index) => (

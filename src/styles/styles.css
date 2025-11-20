@@ -1492,13 +1492,45 @@ footer {
 
 }
 
-.sponsor-item:hover p {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background: #003594 !important;
-  color: white !important;
-  border-color: #003594 !important;
-}
+/* @media (max-width: 480px) {
+    .mission-columns {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .mission-column {
+        padding: 14px;
+    }
+
+    .mission-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .mission-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .mission-column h3 {
+        font-size: 16px;
+    }
+
+    .mission-column p {
+        font-size: 333px;
+    }
+
+    .about-page .mission-columns,
+    .mission-section .mission-columns,
+    .mission-columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 12px !important;
+    }
+
+    .mission-column {
+        min-width: 0;
+    }
+} */
 
 
 .about-page .mission-columns,

@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 
-// Import all CSS files
+// Import CSS in correct order
 import './styles/reset.css';
 import './styles/navbar.css';
 import './styles/styles.css';
