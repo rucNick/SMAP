@@ -7,6 +7,9 @@ import Contact from './pages/Contact';
 import Donate from './pages/Donate';
 import ProjectsArticles from './pages/ProjectsArticles';
 import Resources from './pages/Resources';
+import Events from './pages/Events';
+import Orientation from './pages/Orientation';
+import Volunteer from './pages/Volunteer';
 
 import './styles/reset.css';
 import './styles/navbar.css';
@@ -17,6 +20,9 @@ import './styles/donate.css';
 import './styles/projects-articles.css'; 
 import './styles/responsive.css';
 import './styles/resources.css';
+import './styles/events.css';
+import './styles/get_involved.css';
+import './styles/volunteer.css';
 
 function App() {
   return (
@@ -28,6 +34,9 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/resources" element={<Resources />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/volunteer" element={<Volunteer />} />
+        <Route path="/orientation" element={<Orientation />} />
         <Route path="/projects" element={<ProjectsArticles />} />
       </Routes>
       <Footer />

@@ -103,7 +103,7 @@ function Home() {
       alt: "Street Rounds",
       title: "Street Rounds",
       description: "Learn about our weekly street rounds providing direct medical care and support.",
-      link: "/get-involved",
+      link: "/orientation",
       linkText: "Get Started"
     }
   ];
@@ -294,7 +294,7 @@ function Home() {
               <path d="M6 12v5c3 3 9 3 12 0v-5" />
             </svg>
             <p>
-              <strong>Pitt Students:</strong> <Link to="/get-involved">Street rounds can count toward course credit in Public Health,
+              <strong>Pitt Students:</strong> <Link to="/orientation">Street rounds can count toward course credit in Public Health,
               Nutrition, Engineering, Social Work, Medicine, Computer Science, Dental, and more!</Link>
             </p>
           </div>
@@ -343,7 +343,7 @@ function Home() {
                   </>
                 ) : faq.question === "How to get involved?" ? (
                   <p>
-                    Join us on rounds or help with resources! Check out our <Link to="/get-involved">Get Involved</Link> page for more!
+                    Join us on rounds or help with resources! Check out our <Link to="/orientation">Get Involved</Link> page for more!
                   </p>
                 ) : (
                   <p>{faq.answer}</p>
