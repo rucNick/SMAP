@@ -121,7 +121,10 @@ function Home() {
     <div className="home-page">
       {/* Hero Section */}
       <section className="hero-section">
-        <div className="hero-background">
+        <div 
+          className="hero-background"
+          style={{ backgroundImage: 'url(/Content/Home/bridge.jpg)' }}
+        >
           <div className="hero-overlay"></div>
         </div>
         <div className="hero-content">
@@ -170,9 +173,9 @@ function Home() {
 
             {/* CTA Buttons */}
             <div className="cta-buttons">
-              <Link to="/resources" className="btn btn-primary">View Resources</Link>
-              <Link to="/donate" className="btn btn-secondary">Support Us</Link>
-              <Link to="/volunteer" className="btn btn-tertiary">Join Our Team</Link>
+              <a href="/resources" className="btn btn-primary">View Resources</a>
+              <a href="/donate" className="btn btn-secondary">Support Us</a>
+              <a href="/volunteer" className="btn btn-tertiary">Join Our Team</a>
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@
 /* Base */
 
 :root {
-    --font-serif: 'Lato', sans-serif;
+    --font-serif: 'Lato', serif;
     --font-sans: 'Lato', Arial, sans-serif;
 }
 
@@ -61,7 +61,7 @@ body {
 
 .hero-title,
 .hero-subtitle {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', serif;
     font-weight: 500;
     font-size: 44px;
     text-align: left;
@@ -71,7 +71,7 @@ body {
 .hero-title {
     line-height: 0.96;
     margin-bottom: 10px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', serif;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
 }
 
@@ -81,7 +81,7 @@ body {
 }
 
 .hero-description {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', serif;
     font-weight: bold;
     font-size: 18px;
     line-height: 1.38;
@@ -230,7 +230,7 @@ body {
 /* Typography */
 h2,
 .section-header {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', serif;
     font-size: 48px;
     font-weight: 700;
     text-align: center;
@@ -486,7 +486,7 @@ h2,
 /* Card Content */
 .mission-column h3,
 .service-card h3 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', serif;
     font-weight: 700;
     color: #001f54;
     margin-bottom: 15px;
@@ -635,7 +635,7 @@ h2,
 }
 
 .card-content h3 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', serif;
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 10px;
@@ -774,7 +774,7 @@ h2,
 
 .faq-question {
     padding: 20px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', serif;
     font-size: 20px;
     font-weight: 400;
     cursor: pointer;
@@ -1135,7 +1135,7 @@ footer {
 
 /* "Who we are" on Homepage */
 .photos-text .section-header {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', serif;
     color: #001f54;
     margin: 0 0 10px;
     text-wrap: balance;
@@ -1363,26 +1363,7 @@ footer {
         overflow: hidden;
         text-overflow: ellipsis;
     }
-
-
-    .cta-buttons {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 10px !important;
-        margin-top: 18px !important;
-        justify-items: stretch;
-        align-items: stretch;
-    }
-
-    .cta-buttons .btn {
-        padding: 10px 8px !important;
-        font-size: 8px !important;
-        line-height: 1.1 !important;
-        white-space: nowrap;
-        /* keep on one line */
-        border-radius: 12px !important;
-    }
-
+    
     /* metrics bar */
     .quick-stats-bar {
         padding: 18px 0;
@@ -1540,4 +1521,35 @@ footer {
     grid-auto-flow: row;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
+}
+
+.sponsor-item:hover p {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: #003594 !important;
+    color: white !important;
+    border-color: #003594 !important;
+}
+
+.cta-buttons .btn.btn-primary {
+    background: #FFB81C !important;
+    color: #003594 !important;
+    border-color: #FFB81C !important;
+}
+
+.cta-buttons .btn.btn-secondary {
+    background: white !important;
+    color: #003594 !important;
+    border-color: white !important;
+}
+
+.cta-buttons .btn.btn-tertiary {
+    background: #001f54 !important;
+    color: white !important;
+    border-color: #001f54 !important;
+}
+
+.cta-buttons .btn {
+    border-radius: 50px !important;
+    padding: 14px 35px !important;
 }
