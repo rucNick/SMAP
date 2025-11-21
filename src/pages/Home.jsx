@@ -343,7 +343,7 @@ function Home() {
                   </>
                 ) : faq.question === "How to get involved?" ? (
                   <p>
-                    Join us on rounds or help with resources! Check out our <Link to="/orientation">Get Involved</Link> page for more!
+                    Join us on rounds or help with resources! Check out our <Link to="/volunteer">Get Involved</Link> page for more!
                   </p>
                 ) : (
                   <p>{faq.answer}</p>
