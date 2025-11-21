@@ -6,14 +6,15 @@
 .projects-page-hero {
     position: relative;
     min-height: 60vh;
-    margin-top: 0;  /* Changed from 60px to 0 */
-    padding-top: 60px;  /* Add padding instead to account for fixed navbar */
+    margin-top: -60px;
+    padding-top: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #001f54 0%, #003594 100%);
     overflow: hidden;
 }
+
 .projects-page-hero .hero-background {
     position: absolute;
     top: 0;
@@ -370,11 +371,11 @@
     font-weight: 600;
     text-align: center;
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 50px !important;
     transition: all 0.3s ease;
-    background: white;
-    color: #003594;
-    border: 2px solid #003594;
+    background: white !important;
+    color: #003594 !important;
+    border: 2px solid #003594 !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -382,12 +383,11 @@
 }
 
 .project-actions .btn-outline:hover {
-    background: #003594;
-    color: white;
+    background: #003594 !important;
+    color: white !important;
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(0, 53, 148, 0.3);
 }
-
 /* Publications Section */
 .publications-section {
     grid-column: 1 / -1;
@@ -590,7 +590,9 @@
 }
 
 /* Projects Page CTA Section */
-.projects-cta-section {
+/* Projects-specific CTA section */
+.projects-page .projects-cta-section,
+.projects-page .cta-section {
     padding: 100px 0;
     background: linear-gradient(135deg, #001f54 0%, #003594 100%);
     position: relative;
@@ -598,7 +600,8 @@
     text-align: center;
 }
 
-.projects-cta-section::before {
+.projects-page .projects-cta-section::before,
+.projects-page .cta-section::before {
     content: '';
     position: absolute;
     top: -50%;
@@ -609,7 +612,8 @@
     border-radius: 50%;
 }
 
-.projects-cta-section .cta-content {
+.projects-page .projects-cta-section .cta-content,
+.projects-page .cta-section .cta-content {
     max-width: 700px;
     margin: 0 auto;
     padding: 0 20px;
@@ -617,7 +621,8 @@
     z-index: 1;
 }
 
-.projects-cta-section .cta-content h2 {
+.projects-page .projects-cta-section .cta-content h2,
+.projects-page .cta-section .cta-content h2 {
     font-family: 'Lora', serif;
     font-size: 42px;
     font-weight: 700;
@@ -625,17 +630,46 @@
     margin: 0 0 20px 0;
 }
 
-.projects-cta-section .cta-content p {
+.projects-page .projects-cta-section .cta-content p,
+.projects-page .cta-section .cta-content p {
     font-size: 18px;
     color: rgba(255, 255, 255, 0.9);
     margin: 0 0 40px 0;
     line-height: 1.8;
 }
 
-.projects-cta-section .cta-buttons {
+.projects-page .projects-cta-section .cta-buttons,
+.projects-page .cta-section .cta-buttons {
     display: flex;
     gap: 20px;
     justify-content: center;
+}
+
+/* Projects page button overrides - highly specific */
+.projects-page .projects-cta-section .btn,
+.projects-page .cta-section .btn,
+.projects-page .projects-cta-section .cta-buttons .btn,
+.projects-page .cta-section .cta-buttons .btn {
+    border-radius: 50px !important;
+    padding: 14px 35px !important;
+}
+
+.projects-page .projects-cta-section .btn-primary,
+.projects-page .cta-section .btn-primary,
+.projects-page .projects-cta-section .cta-buttons .btn-primary,
+.projects-page .cta-section .cta-buttons .btn-primary {
+    background: #FFB81C !important;
+    color: #003594 !important;
+    border-color: #FFB81C !important;
+}
+
+.projects-page .projects-cta-section .btn-secondary,
+.projects-page .cta-section .btn-secondary,
+.projects-page .projects-cta-section .cta-buttons .btn-secondary,
+.projects-page .cta-section .cta-buttons .btn-secondary {
+    background: white !important;
+    color: #003594 !important;
+    border-color: white !important;
 }
 
 /* Projects Page Specific Animations */
@@ -748,4 +782,44 @@
     .project-title {
         font-size: 19px;
     }
+}
+
+
+/* Projects Page Button Overrides - Must be at end of file */
+.projects-page .btn,
+.projects-page .projects-cta-section .btn,
+.projects-page .cta-section .btn,
+.projects-page .project-actions .btn,
+.projects-page a.btn {
+    border-radius: 50px !important;
+    padding: 14px 35px !important;
+}
+
+.projects-page .btn-primary,
+.projects-page .projects-cta-section .btn-primary,
+.projects-page .cta-section .btn-primary,
+.projects-page a.btn-primary {
+    background: #FFB81C !important;
+    color: #003594 !important;
+    border-color: #FFB81C !important;
+}
+
+.projects-page .btn-secondary,
+.projects-page .projects-cta-section .btn-secondary,
+.projects-page .cta-section .btn-secondary,
+.projects-page a.btn-secondary {
+    background: white !important;
+    color: #003594 !important;
+    border-color: white !important;
+}
+
+.projects-page .project-actions .btn-outline {
+    background: white !important;
+    color: #003594 !important;
+    border-color: #003594 !important;
+}
+
+.projects-page .project-actions .btn-outline:hover {
+    background: #003594 !important;
+    color: white !important;
 }
